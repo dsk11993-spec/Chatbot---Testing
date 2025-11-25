@@ -3,8 +3,24 @@ body {
 }
 
 .hero {
-    height: 65vh;
+    height: 75vh;
     background: linear-gradient(135deg, #4f46e5, #6a5af9);
     color: white;
     padding: 40px 20px;
+}
+
+.feature-box {
+    background: white;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
