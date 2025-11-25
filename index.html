@@ -3,28 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Website</title>
+    <title>Advanced Sample Website</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Sample Website</h1>
-        <p>GitHub Pages | Chatbot Testing</p>
-    </header>
 
-    <section>
-        <h2>About This Site</h2>
-        <p>This is a clean, modern sample website for testing your Chatbase chatbot.</p>
-    </section>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">My Sample Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#chatbot">Chatbot</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <section>
-        <h2>Chatbot Area</h2>
-        <p>Paste your Chatbase script below:</p>
-        <pre>&lt;script&gt; Your chatbot script here &lt;/script&gt;</pre>
-    </section>
+<!-- HERO SECTION -->
+<section id="home" class="hero d-flex align-items-center text-center text-white">
+  <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to Your Modern Website</h1>
+      <p class="lead mt-3">A clean, responsive layout designed for GitHub Pages & chatbot testing.</p>
+      <a href="#chatbot" class="btn btn-light btn-lg mt-4 shadow">Go to Chatbot Section</a>
+  </div>
+</section>
 
-    <footer>
-        <p>© 2025 Sample Website</p>
-    </footer>
+<!-- FEATURES -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Website Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 feature-box shadow-sm">
+                    <h4 class="fw-bold">✔ Modern Design</h4>
+                    <p>Smooth layout, responsive structure, and attractive styling.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 feature-box shadow-sm">
+                    <h4 class="fw-bold">✔ Chatbot Ready</h4>
+                    <p>Paste your Chatbase script and test instantly on GitHub Pages.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 feature-box shadow-sm">
+                    <h4 class="fw-bold">✔ Bootstrap Powered</h4>
+                    <p>Uses Bootstrap 5 for layout, spacing, UI components & speed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CHATBOT SECTION -->
+<section id="chatbot" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-4">Chatbot Integration Area</h2>
+        <p class="text-center">Paste your Chatbase chatbot script inside the block below.</p>
+
+        <div class="card shadow p-4 mt-3">
+            <h5 class="fw-bold">Chatbase Script:</h5>
+            <pre class="bg-dark text-white p-3 rounded">
+&lt;script&gt;
+  <!-- Paste your Chatbase script here -->
+&lt;/script&gt;
+            </pre>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="py-4 bg-primary text-white text-center">
+    <p class="mb-0">© 2025 Advanced Sample Website | GitHub Pages</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
