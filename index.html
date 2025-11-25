@@ -1,61 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Website with Chatbase</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      font-size: 18px;
-    }
-    footer {
-      margin-top: 50px;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to My Sample Site</h1>
-  <p>Test your Chatbase chatbot below!</p>
+    <header>
+        <h1>Welcome to My Sample Website</h1>
+        <p>GitHub Pages | Chatbot Testing</p>
+    </header>
 
-  <!-- Chatbase chatbot embed with cache-busting -->
-  <script>
-    (function(){
-      if(!window.chatbase || window.chatbase("getState")!=="initialized"){
-        window.chatbase=(...arguments)=>{
-          if(!window.chatbase.q){window.chatbase.q=[]}
-          window.chatbase.q.push(arguments)
-        };
-        window.chatbase=new Proxy(window.chatbase,{
-          get(target,prop){
-            if(prop==="q"){return target.q}
-            return(...args)=>target(prop,...args)
-          }
-        })
-      }
-      const onLoad=function(){
-        const script=document.createElement("script");
-        script.src="https://www.chatbase.co/embed.min.js?ver=1"; /* cache-busting */
-        script.id="YWW8nfCTckb8SYfxhul_4";
-        script.domain="www.chatbase.co";
-        document.body.appendChild(script)
-      };
-      if(document.readyState==="complete"){onLoad()}
-      else{window.addEventListener("load",onLoad)}
-    })();
-  </script>
+    <section>
+        <h2>About This Site</h2>
+        <p>This is a clean, modern sample website for testing your Chatbase chatbot.</p>
+    </section>
 
-  <footer>
-    &copy; 2025 Sample Website
-  </footer>
+    <section>
+        <h2>Chatbot Area</h2>
+        <p>Paste your Chatbase script below:</p>
+        <pre>&lt;script&gt; Your chatbot script here &lt;/script&gt;</pre>
+    </section>
+
+    <footer>
+        <p>© 2025 Sample Website</p>
+    </footer>
 </body>
 </html>
