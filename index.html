@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website with Chatbase (Corrected Script)</title>
+<style>
+  body { 
+    font-family: Arial, sans-serif; 
+    padding: 40px; 
+    background: #f0f0f0; 
+  }
+  .container { 
+    max-width: 800px; 
+    margin: auto; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 12px; 
+  }
+  h1 { color: #222; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Website with Chatbase Chatbot (Corrected Script)</h1>
+    <p>This website includes the Chatbase chatbot widget using the fully corrected integration code.</p>
+    <p>Make sure to replace the Chatbase ID with your actual bot ID.</p>
+  </div>
+
+  <!-- Correct Chatbase Script -->
+  <script>
+    (function() {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...args) => {
+          if (!window.chatbase.q) {
+            window.chatbase.q = [];
+          }
+          window.chatbase.q.push(args);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") return target.q;
+            return (...args) => target(prop, ...args);
+          }
+        });
+      }
+
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "YWW8nfCTckb8SYfxhul_4"; /* Replace with your Chatbase ID */
+        script.defer = true;
+        document.body.appendChild(script);
+      };
+
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+
+</body>
+</html>
